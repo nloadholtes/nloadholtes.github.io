@@ -1,10 +1,16 @@
-Hi. HomeView.html here. Please enter user’s first and last name.
-I’ve provided an initial first name for you.
-User first name: 
-User last name: 
-
-
-Ok, so far I have:
-
-First name: {{user.firstName}}
-Last name: {{user.lastName}}
+<div ng-controller="myAppController">
+  Hi. HomeView.html here. Please enter user's first and last name.<br>
+  I've provided an initial first name for you.
+  <br>
+  <br>
+  User first name: <input ng-model="user.firstName"><br>
+  User last name: <input ng-model="user.lastName"><br>
+  <br>
+  <div>
+  <span ng-show="user.firstName.length || user.lastName.length">
+    Ok, so far I have:<br>
+  </span>
+  First name: {{user.firstName}}<br>
+  Last name: {{user.lastName}}<br>
+  </div>
+</div>
