@@ -3,7 +3,9 @@
   I've provided an initial first name for you.
   <br>
   <br>
-  Keyword: <input ng-model="user.firstName"><br>
+  Keyword: <input ng-model="keyword">
+  <button value="search">Search</button>
+<br>
   <br>
   <div>
   <span ng-show="user.firstName.length || user.lastName.length">
@@ -12,7 +14,14 @@
   First name: {{user.firstName}}<br>
   Last name: {{user.lastName}}<br>
   </div>
-<button value="search">Search</button>
 <div class="results">
+<table>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 </div>
 </div>

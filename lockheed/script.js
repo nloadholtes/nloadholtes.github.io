@@ -11,8 +11,8 @@ angular.module('myApp',['ngRoute'])
     });
  })
  .controller('myAppController', function($scope) {
-     $scope.user = {};
-     $scope.user.firstName = 'Joe';
+     $scope.keyword = '';
      var url = 'http://search.lockheedmartinjobs.com/Rss/ByKeyword/';
-
+     console.log("testing")
+     console.log($scope.keyword)
  });
