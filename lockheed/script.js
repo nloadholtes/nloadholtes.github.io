@@ -15,4 +15,5 @@ angular.module('myApp',['ngRoute'])
      var url = 'http://search.lockheedmartinjobs.com/Rss/ByKeyword/';
      console.log("testing")
      console.log($scope.keyword)
+     $scope.results = "";
  });
