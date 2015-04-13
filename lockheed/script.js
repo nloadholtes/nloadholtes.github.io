@@ -11,8 +11,8 @@ angular.module('myApp',['ngRoute'])
     controller: 'myAppController'
     });
  })
- .controller('myAppController', function($scope) {
-     $scope.keyword = null;
+ .controller('myAppController', function($scope, $http) {
+     $scope.keyword = 'python';
      var url = 'http://search.lockheedmartinjobs.com/Rss/ByKeyword/';
      console.log("testing")
      console.log($scope.keyword)
@@ -20,6 +20,13 @@ angular.module('myApp',['ngRoute'])
          console.log("Searching for keyword:" + $scope.keyword);
          //Search for
          url = url + $scope.keyword;
+         var rss_promise = $http.jsonp(url, {});
+         rss_promise.success(function (data) {
+             console.log('worked: ' + data);
+         });
+         rss_promise.error(function (data) {
+             console.log('failed: ' + data);
+         });
      }
      $scope.results = "";
  });
